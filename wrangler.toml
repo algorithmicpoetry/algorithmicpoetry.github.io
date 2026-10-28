@@ -1,0 +1,19 @@
+# Cloudflare Worker — free-tier friendly (design target: <10ms CPU / request).
+# Deploy: npm run build && npm run worker:deploy
+# Local:  npm run build && npm run worker:dev
+
+name = "algorithmicpoetry"
+main = "worker/src/index.ts"
+compatibility_date = "2025-10-11"
+workers_dev = true
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+# SPA fallback for React Navigation client routes
+not_found_handling = "single-page-application"
+run_worker_first = ["/api/*"]
+
+[vars]
+APP_NAME = "my-app"
+CPU_BUDGET_MS = "10"

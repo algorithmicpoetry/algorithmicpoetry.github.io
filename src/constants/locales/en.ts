@@ -43,6 +43,8 @@ const en = {
     labelPlatform: 'Platform',
     labelOsVersion: 'OS Version',
     labelRuntime: 'Runtime',
+    labelEdge: 'Edge',
+    edgeOffline: 'offline',
   },
   profile: {
     title: 'Profile',
